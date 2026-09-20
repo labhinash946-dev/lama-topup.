@@ -1,0 +1,13 @@
+FINAL LAMA TOPUP PACKAGE
+
+Includes:
+- All Free Fire diamond prices and memberships
+- All eFootball coin prices and special packs
+- eFootball account details: KONAMI ID, WhatsApp number, and device
+
+To update GitHub:
+1. Replace index.html, style.css, and script.js in your repository.
+2. Commit changes.
+3. Render will redeploy automatically.
+
+Security: Never collect or request a customer's KONAMI password. This remains a frontend demo until a secure backend and verified payment system are added.
