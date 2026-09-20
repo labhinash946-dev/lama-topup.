@@ -1,0 +1,37 @@
+services:
+  - type: web
+    name: lama-topup-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: GOXTOP_API_KEY
+        sync: false
+      - key: GOXTOP_BASE_URL
+        value: https://goxtop.com/api/v.1
+      - key: GOXTOP_FREEFIRE_GAME_CODE
+        value: freefire_global
+      - key: GOXTOP_CREATE_PATH
+        value: /create
+      - key: GOXTOP_TIMEOUT
+        value: "20"
+      - key: DRY_RUN
+        value: "true"
+      - key: FF_25_CODE
+        sync: false
+      - key: FF_50_CODE
+        sync: false
+      - key: FF_115_CODE
+        sync: false
+      - key: FF_240_CODE
+        sync: false
+      - key: FF_610_CODE
+        sync: false
+      - key: FF_1240_CODE
+        sync: false
+      - key: FF_2530_CODE
+        sync: false
+      - key: FF_WEEKLY_CODE
+        sync: false
+      - key: FF_MONTHLY_CODE
+        sync: false
