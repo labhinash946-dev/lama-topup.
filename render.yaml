@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: lama-topup
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: GOXTOP_API_KEY
+        sync: false
+      - key: DRY_RUN
+        value: "true"
